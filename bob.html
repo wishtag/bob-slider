@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<html>
+<title>Bob</title>
+
+<body>
+  <h1 style="text-align: center;">Bob Slider</h1>
+  <div style="text-align: center;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIC25nqru3yN9lhtoTwdBWt_u0QlOcPzw3Bw&s" alt="bob" style="opacity:0.0;filter:alpha(opacity=0);" width="500" height="500" id="bob">
+  </div>
+  <div style="text-align: center;">
+    <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+  </div>
+  <script>
+    var slider = document.getElementById("myRange");
+    var image = document.getElementById("bob");
+    image.style.opacity = slider.value/100;
+
+    slider.oninput = function() {
+      image.style.opacity = this.value/100;
+    }
+  </script>
+</body>
+
+</html>
